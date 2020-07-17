@@ -3,7 +3,7 @@ import React from "react"
 const WhiteBlock = props => {
   return (
     <>
-      <div class="block-white">{props.children}</div>
+      <div className="block-white">{props.children}</div>
     </>
   )
 }

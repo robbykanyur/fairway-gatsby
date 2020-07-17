@@ -26,6 +26,8 @@ import america from "../images/home/home-america.svg"
 
 import _ from "underscore"
 
+import "../base.css"
+
 const HomePage = () => {
   const location_images = [
     { src: homeChandler, text: "Chandler" },

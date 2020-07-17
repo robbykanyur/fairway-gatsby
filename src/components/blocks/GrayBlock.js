@@ -3,7 +3,7 @@ import React from "react"
 const GrayBlock = props => {
   return (
     <>
-      <div class="block-gray">{props.children}</div>
+      <div className="block-gray">{props.children}</div>
     </>
   )
 }
