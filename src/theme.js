@@ -38,22 +38,23 @@ const theme = {
   spacer4XL: "74px",
   spacer5XL: "90px",
 
-  type3XS: "11px",
-  type2XS: "14px",
-  typeXS: "16px",
-  typeS: "20px",
-  typeM: "24px",
-  typeL: "28px",
-  typeXL: "34px",
-  type2XL: "40px",
-  type3XL: "50px",
-  type4XL: "60px",
-  type5XL: "72px",
+  type4XS: "8px",
+  type3XS: "10px",
+  type2XS: "12px",
+  typeXS: "15px",
+  typeS: "18px",
+  typeM: "22px",
+  typeL: "26px",
+  typeXL: "31px",
+  type2XL: "38px",
+  type3XL: "45px",
+  type4XL: "54px",
+  type5XL: "65px",
 
   sans: "Mark Pro",
   serif: "Reckless Trial",
 
-  wrapperWidth: "990px",
+  wrapper: "990px",
 }
 
 export default theme

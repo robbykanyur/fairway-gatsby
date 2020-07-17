@@ -7,30 +7,27 @@ import ButtonInline from "../buttons/ButtonInline"
 import iconFairway from "../../images/shared/shared-icon.svg"
 
 const StyledWrapper = styled.div`
-  width: ${theme.wrapperWidth};
+  width: ${theme.wrapper};
   margin: 0 auto;
-`
-
-const StyledNav = styled.nav`
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: ${theme.spacerS} 0;
-`
-
-const StyledIcon = styled.div`
-  width: 45px;
-`
-
-const StyledLink = styled(Link)`
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: ${theme.typeXS};
-  font-family: ${theme.sans};
-  color: ${theme.grayLightOne};
-  margin-right: ${theme.spacerL};
-  font-weight: 700;
+  nav {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: ${theme.spacerS} 0;
+    .icon {
+      width: 45px;
+    }
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: ${theme.typeXS};
+      font-family: ${theme.sans};
+      color: ${theme.grayLightOne};
+      margin-right: ${theme.spacerL};
+      font-weight: 700;
+    }
+  }
 `
 
 const Nav = () => {
@@ -43,25 +40,25 @@ const Nav = () => {
 
   return (
     <StyledWrapper>
-      <StyledNav>
-        <StyledIcon>
+      <nav>
+        <div className="icon">
           <img
             src={iconFairway}
             width="100%"
             alt="Fairway Independent Mortgage Logo"
           />
-        </StyledIcon>
+        </div>
         <div>
           {links.map((value, index) => {
             return (
-              <StyledLink key={index} to={value.url}>
+              <Link key={index} to={value.url}>
                 {value.text}
-              </StyledLink>
+              </Link>
             )
           })}
           <ButtonInline url="/" text="Get Approved" />
         </div>
-      </StyledNav>
+      </nav>
     </StyledWrapper>
   )
 }
