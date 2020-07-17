@@ -25,7 +25,6 @@ import homeSmiling from "../images/home/home-smiling.jpg"
 import america from "../images/home/home-america.svg"
 
 import _ from "underscore"
-
 import "../base.css"
 
 const HomePage = () => {

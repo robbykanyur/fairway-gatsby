@@ -1,14 +1,22 @@
 import React from "react"
+import { createUseStyles } from "react-jss"
 
 const HeroBlock = props => {
-  return (
-    <div className="block block-hero">
-      <div className="block-hero-image">
-        <img src={props.img} width="100%" alt="" />
-        <div className="block-hero-content">{props.children}</div>
-      </div>
-    </div>
-  )
+  const useStyles = createUseStyles({
+    heroWrapper: {
+      backgroundImage: `url(${props.img})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      height: "600px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+  })
+
+  const classes = useStyles()
+
+  return <div className={classes.heroWrapper}>{props.children}</div>
 }
 
 export default HeroBlock
