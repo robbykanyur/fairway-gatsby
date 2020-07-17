@@ -1,35 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
+import theme from "../../theme"
 
-import { createUseStyles } from "react-jss"
-import * as vars from "../../variables"
-const createStyles = createUseStyles({
-  button: {
-    display: "inline-block",
-    background: vars.colorRed,
-    color: vars.colorWhite,
-    textDecoration: "none",
-    fontSize: vars.type2XS,
-    fontFamily: vars.sans,
-    fontWeight: 900,
-    textTransform: "uppercase",
-    padding: {
-      top: vars.spacer2XS,
-      right: vars.spacerM,
-      bottom: vars.spacer2XS,
-      left: vars.spacerM,
-    },
-    borderRadius: "38px",
-  },
-})
+const StyledLink = styled(Link)`
+  display: inline-block;
+  text-decoration: none;
+  font-family: ${theme.sans};
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: ${theme.spacer2XS} ${theme.spacerM};
+  border-radius: 38px;
+  background: #f08a81;
+  font-size: 16px;
+  color: #ffffff;
+`
 
 const ButtonInline = ({ url, text }) => {
-  const classes = createStyles()
-  return (
-    <Link className={classes.button} to={url}>
-      {text}
-    </Link>
-  )
+  return <StyledLink to={url}>{text}</StyledLink>
 }
 
 export default ButtonInline

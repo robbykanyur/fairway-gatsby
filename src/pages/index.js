@@ -1,12 +1,10 @@
 import React from "react"
+import styled from "styled-components"
 
 import Nav from "../components/shared/Nav"
 import Footer from "../components/shared/Footer"
 import CTA from "../components/shared/CTA"
-
-import HeroBlock from "../components/blocks/HeroBlock"
-import GrayBlock from "../components/blocks/GrayBlock"
-import WhiteBlock from "../components/blocks/WhiteBlock"
+import Hero from "../components/shared/Hero"
 
 import ButtonAlternate from "../components/buttons/ButtonAlternate"
 import ButtonPrimary from "../components/buttons/ButtonPrimary"
@@ -26,6 +24,27 @@ import america from "../images/home/home-america.svg"
 
 import _ from "underscore"
 import "../base.css"
+import theme from "../theme"
+
+const StyledBlock01 = styled.div`
+  background: ${theme.colorWhite};
+`
+
+const StyledBlock02 = styled.div`
+  background: ${theme.colorWhite};
+`
+
+const StyledBlock03 = styled.div`
+  background: ${theme.colorWhite};
+`
+
+const StyledBlock04 = styled.div`
+  background: ${theme.colorWhite};
+`
+
+const StyledBlock05 = styled.div`
+  background: ${theme.colorWhite};
+`
 
 const HomePage = () => {
   const location_images = [
@@ -37,14 +56,14 @@ const HomePage = () => {
   return (
     <>
       <Nav />
-      <HeroBlock img={homeHero}>
+      <Hero img={homeHero}>
         <HeaderAngle text="Financing the American Dream." />
-      </HeroBlock>
-      <WhiteBlock>
-        <div className="icon-wrapper">
+      </Hero>
+      <StyledBlock01>
+        <div>
           <img src={iconCactus} width="100%" alt="" />
         </div>
-        <div className="text">
+        <div>
           <h2>We are your Metro Phoenix mortgage experts.</h2>
           <p>
             Fairway Independent Mortgage Corporation has been a trusted local
@@ -52,8 +71,8 @@ const HomePage = () => {
             your homebuying journey, our experienced team is here to help.
           </p>
         </div>
-      </WhiteBlock>
-      <WhiteBlock>
+      </StyledBlock01>
+      <StyledBlock02>
         <div className="images-block">
           {location_images.map((value, index) => {
             return (
@@ -68,8 +87,8 @@ const HomePage = () => {
             )
           })}
         </div>
-      </WhiteBlock>
-      <WhiteBlock>
+      </StyledBlock02>
+      <StyledBlock03>
         <div className="review-block-photo">
           <img src={homeSmiling} width="100%" alt="" />
         </div>
@@ -91,8 +110,8 @@ const HomePage = () => {
         </div>
 
         <ButtonPrimary url="/" text="Read More Reviews" />
-      </WhiteBlock>
-      <GrayBlock>
+      </StyledBlock03>
+      <StyledBlock04>
         <img src={iconStar} width="100%" alt="" />
         <h2>National Strength and Hometown Service</h2>
         <p>
@@ -112,8 +131,8 @@ const HomePage = () => {
           touch, providing essential guidance to make sure your loan closes{" "}
           <strong>quickly, smoothly, and right on time.</strong>
         </p>
-      </GrayBlock>
-      <WhiteBlock>
+      </StyledBlock04>
+      <StyledBlock05>
         <>
           <h2>By the Numbers:</h2>
           <div className="numbersItem">
@@ -130,7 +149,7 @@ const HomePage = () => {
             <img src={america} width="100%" alt="" />
           </div>
         </>
-      </WhiteBlock>
+      </StyledBlock05>
       <CTA>
         <img src={iconApply} width="100%" alt="" />
         <h1 className="cta-header">Start your approval online today</h1>

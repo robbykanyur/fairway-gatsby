@@ -1,35 +1,37 @@
 import React from "react"
 import { Link } from "gatsby"
-import { createUseStyles } from "react-jss"
+import styled from "styled-components"
+import theme from "../../theme"
 
 import ButtonInline from "../buttons/ButtonInline"
 import iconFairway from "../../images/shared/shared-icon.svg"
 
-import * as vars from "../../variables"
-const createStyles = createUseStyles({
-  wrapper: {
-    backgroundColor: vars.colorWhite,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: {
-      top: vars.spacerS,
-      bottom: vars.spacerS,
-    },
-  },
-  icon: {
-    width: "45px",
-  },
-  link: {
-    fontFamily: vars.sans,
-    fontWeight: 900,
-    fontSize: vars.type2XS,
-    textTransform: "uppercase",
-    textDecoration: "none",
-    marginRight: vars.spacerS,
-    color: vars.grayLightOne,
-  },
-})
+const StyledWrapper = styled.div`
+  width: ${theme.wrapperWidth};
+  margin: 0 auto;
+`
+
+const StyledNav = styled.nav`
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: ${theme.spacerS} 0;
+`
+
+const StyledIcon = styled.div`
+  width: 45px;
+`
+
+const StyledLink = styled(Link)`
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: ${theme.typeXS};
+  font-family: ${theme.sans};
+  color: ${theme.grayLightOne};
+  margin-right: ${theme.spacerL};
+  font-weight: 700;
+`
 
 const Nav = () => {
   const links = [
@@ -39,28 +41,28 @@ const Nav = () => {
     { text: "Learn More", url: "learn-more" },
   ]
 
-  const classes = createStyles()
-
   return (
-    <nav className={classes.wrapper + " wrapper"}>
-      <div className={classes.icon}>
-        <img
-          src={iconFairway}
-          width="100%"
-          alt="Fairway Independent Mortgage Logo"
-        />
-      </div>
-      <div>
-        {links.map((value, index) => {
-          return (
-            <Link className={classes.link} key={index} to={value.url}>
-              {value.text}
-            </Link>
-          )
-        })}
-        <ButtonInline url="/" text="Get Approved" />
-      </div>
-    </nav>
+    <StyledWrapper>
+      <StyledNav>
+        <StyledIcon>
+          <img
+            src={iconFairway}
+            width="100%"
+            alt="Fairway Independent Mortgage Logo"
+          />
+        </StyledIcon>
+        <div>
+          {links.map((value, index) => {
+            return (
+              <StyledLink key={index} to={value.url}>
+                {value.text}
+              </StyledLink>
+            )
+          })}
+          <ButtonInline url="/" text="Get Approved" />
+        </div>
+      </StyledNav>
+    </StyledWrapper>
   )
 }
 
