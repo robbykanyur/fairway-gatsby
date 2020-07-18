@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import theme from "../../theme"
+import vars from "../../vars"
 
 const StyledIconWrapper = styled.div`
   width: 150px;
-  margin: 0 auto ${theme.spacerS};
+  margin: 0 auto ${vars.spacerS};
 `
 
 const SectionIcon = props => {

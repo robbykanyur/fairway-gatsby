@@ -158,4 +158,13 @@ h6 {
 
 p {
   line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+strong {
+  font-weight: 700;
 }

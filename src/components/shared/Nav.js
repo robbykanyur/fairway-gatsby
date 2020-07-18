@@ -1,31 +1,34 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import theme from "../../theme"
+import vars from "../../vars"
 
 import ButtonInline from "../buttons/ButtonInline"
 import iconFairway from "../../images/shared/shared-icon.svg"
 
 const StyledWrapper = styled.div`
-  width: ${theme.wrapper};
+  width: ${vars.wrapper};
   margin: 0 auto;
   nav {
     background: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: ${theme.spacerS} 0;
+    padding: ${vars.spacerS} 0;
     .icon {
       width: 45px;
     }
     a {
       text-transform: uppercase;
       text-decoration: none;
-      font-size: ${theme.typeXS};
-      font-family: ${theme.sans};
-      color: ${theme.grayLightOne};
-      margin-right: ${theme.spacerL};
+      font-size: ${vars.typeXS};
+      font-family: ${vars.sans};
+      color: ${vars.grayLightOne};
+      margin-right: ${vars.spacerL};
       font-weight: 700;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 `

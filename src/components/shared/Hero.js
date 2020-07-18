@@ -11,8 +11,8 @@ const StyledWrapper = styled.div`
   justify-content: center;
 `
 
-const Hero = ({ img, ...props }) => {
-  return <StyledWrapper img={img}>{props.children}</StyledWrapper>
+const Hero = props => {
+  return <StyledWrapper img={props.img}>{props.children}</StyledWrapper>
 }
 
 export default Hero

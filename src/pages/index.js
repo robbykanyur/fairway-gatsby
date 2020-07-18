@@ -1,5 +1,6 @@
 import React from "react"
-import styled from "styled-components"
+import { Link } from "gatsby"
+import { ThemeProvider } from "styled-components"
 
 import Nav from "../components/shared/Nav"
 import Footer from "../components/shared/Footer"
@@ -27,75 +28,13 @@ import _ from "underscore"
 import "../base.css"
 import theme from "../theme"
 
-const StyledIntroBlock = styled.div`
-  background: ${theme.colorWhite};
-  padding-top: ${theme.spacer5XL};
-  padding-bottom: ${theme.spacer5XL};
-  text-align: center;
-  h2 {
-    margin: 0 auto ${theme.spacerS};
-    width: 800px;
-    font-size: ${theme.type2XL};
-  }
-  p {
-    width: 700px;
-    margin: 0 auto;
-  }
-`
-
-const StyledLocationBlock = styled.div`
-  background: ${theme.colorWhite};
-  position: relative;
-  .wrapper {
-    width: ${theme.wrapper};
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-  &::before {
-    content: "";
-    background: ${theme.grayDarkOne};
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 70%;
-  }
-  .item {
-    display: block;
-    width: 299px;
-    height: 368px;
-    position: relative;
-    p {
-      position: absolute;
-      bottom: 0;
-      display: block;
-      background: ${theme.colorBlack};
-      width: 100%;
-      color: ${theme.colorWhite};
-      text-align: center;
-      font-family: ${theme.sans};
-      text-transform: uppercase;
-      line-height: 40px;
-      font-size: ${theme.typeS};
-      font-weight: 500;
-      letter-spacing: 2px;
-    }
-  }
-`
-
-const StyledLocationItem = styled.a``
-
-const StyledReviewBlock = styled.div`
-  background: ${theme.colorWhite};
-`
-
-const StyledStrengthBlock = styled.div`
-  background: ${theme.colorWhite};
-`
-
-const StyledNumbersBlock = styled.div`
-  background: ${theme.colorWhite};
-`
+import {
+  StyledIntroBlock,
+  StyledLocationBlock,
+  StyledReviewBlock,
+  StyledStrengthBlock,
+  StyledNumbersBlock,
+} from "./indexStyles"
 
 const HomePage = () => {
   const location_images = [
@@ -105,7 +44,7 @@ const HomePage = () => {
   ]
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Nav />
       <Hero img={homeHero}>
         <HeaderAngle text="Financing the American Dream." />
@@ -125,39 +64,38 @@ const HomePage = () => {
         <div className="wrapper">
           {location_images.map((value, index) => {
             return (
-              <div className="item" href={value.url} key={index}>
+              <Link className="item" to={value.url} key={index}>
                 <img src={value.src} width="100%" alt="" />
                 <p>{value.text}</p>
-              </div>
+              </Link>
             )
           })}
         </div>
       </StyledLocationBlock>
       <StyledReviewBlock>
-        <div className="review-block-photo">
-          <img src={homeSmiling} width="100%" alt="" />
-        </div>
-        <div className="review-block-review">
-          <div className="review-block-star-wrapper">
-            {_(5).times(i => (
-              <div className="review-block-star" key={i}>
-                <img src={iconStarPlain} width="100%" alt="" />
-              </div>
-            ))}
+        <div className="wrapper">
+          <div className="photo">
+            <img src={homeSmiling} width="100%" alt="" />
           </div>
-          <div className="review-block-text">
+          <div className="text-wrapper">
+            <div className="star-wrapper">
+              {_(5).times(i => (
+                <div className="star" key={i}>
+                  <img src={iconStarPlain} width="100%" alt="" />
+                </div>
+              ))}
+            </div>
             <h2>
               &ldquo;Fairway is, by far, the best mortgage lender I have ever
               worked with.&rdquo;
             </h2>
             <p>Stuart T. (Scottsdale)</p>
+            <ButtonPrimary url="/" text="Read More Reviews" />
           </div>
         </div>
-
-        <ButtonPrimary url="/" text="Read More Reviews" />
       </StyledReviewBlock>
       <StyledStrengthBlock>
-        <img src={iconStar} width="100%" alt="" />
+        <SectionIcon img={iconStar} />
         <h2>National Strength and Hometown Service</h2>
         <p>
           With over <strong>500 branches nationwide</strong> and corporate
@@ -180,19 +118,20 @@ const HomePage = () => {
       <StyledNumbersBlock>
         <>
           <h2>By the Numbers:</h2>
-          <div className="numbersItem">
+          <div className="item">
             <p>$39.15 Billion in Loan Volume</p>
           </div>
-          <div className="numbersItem">
+          <div className="item">
             <p>7,000+ Employees Nationwide</p>
           </div>
-          <div className="numbersItem">
-            <p>&ldquo;Best FHA Lender in America&rdquo;</p>
-            <p className="attrib">(Nerdwallet &ndash; 2020)</p>
+          <div className="item">
+            <p>
+              &ldquo;Best FHA Lender in America&rdquo;
+              <br />
+              <span className="attrib">(Nerdwallet &ndash; 2020)</span>
+            </p>
           </div>
-          <div className="numbersImage">
-            <img src={america} width="100%" alt="" />
-          </div>
+          <img src={america} width="100%" alt="" />
         </>
       </StyledNumbersBlock>
       <CTA>
@@ -207,7 +146,7 @@ const HomePage = () => {
         <ButtonAlternate url="/" text="Get Your Decision" />
       </CTA>
       <Footer />
-    </>
+    </ThemeProvider>
   )
 }
 
