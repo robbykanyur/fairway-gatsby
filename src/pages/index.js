@@ -135,15 +135,17 @@ const HomePage = () => {
         </>
       </StyledNumbersBlock>
       <CTA>
-        <img src={iconApply} width="100%" alt="" />
-        <h1 className="cta-header">Start your approval online today</h1>
-        <p className="cta-text">
+        <SectionIcon img={iconApply} />
+        <h1>Start your approval online today</h1>
+        <p>
           Completing our initial application takes{" "}
           <strong>less than ten minutes.</strong> One of our experienced loan
           originators will reach out to explain your options and help you find
           the <strong>best loan for your needs.</strong>
         </p>
-        <ButtonAlternate url="/" text="Get Your Decision" />
+        <span>
+          <ButtonAlternate url="/" text="Get Your Decision" />
+        </span>
       </CTA>
       <Footer />
     </ThemeProvider>

@@ -8,7 +8,6 @@ export const StyledIntroBlock = styled.div`
   text-align: center;
   h2 {
     ${props => props.theme.headingSans2};
-    width: 600px;
   }
   p {
     width: 700px;
@@ -109,7 +108,6 @@ export const StyledStrengthBlock = styled.div`
   padding: ${vars.spacer5XL} 0 150px;
   h2 {
     ${props => props.theme.headingSans2}
-    width: 600px;
   }
   p {
     width: 750px;
@@ -123,7 +121,7 @@ export const StyledNumbersBlock = styled.div`
   background: ${vars.colorWhite};
   position: relative;
   z-index: 6000;
-  padding: 160px 0;
+  padding: 100px 0 80px;
   text-align: center;
   img {
     width: 94%;

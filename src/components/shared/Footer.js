@@ -1,75 +1,204 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
+import vars from "../../vars"
+
+import fairwayImage from "../../images/shared/shared-fairway.svg"
+import ehlImage from "../../images/shared/shared-ehl.svg"
+
+const StyledFooter = styled.footer`
+  padding: ${vars.spacer4XL} 0 ${vars.spacerXL};
+  background: ${vars.colorWhite};
+  .links {
+    width: ${vars.wrapper};
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: ${vars.sans};
+    text-decoration: none;
+    font-size: ${vars.typeS};
+    font-weight: 100;
+  }
+  li {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    &.double {
+      height: 60px;
+    }
+    a {
+      text-decoration: none;
+      color: ${vars.colorBlack};
+    }
+    .bold {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  .logos {
+    margin-top: ${vars.spacer3XL};
+    opacity: 0.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .fairway {
+      width: 174px;
+      margin-right: ${vars.spacerM};
+    }
+    .ehl {
+      width: 43px;
+      position: relative;
+      top: 2px;
+    }
+  }
+`
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer-links">
-        <div className="footer-link-column">
-          <Link to="/" className="bold">
-            Home
-          </Link>
-          <Link to="/">About</Link>
-          <Link to="/">Reviews</Link>
-          <Link to="/">Leadership</Link>
-          <span className="spacer"></span>
-          <Link to="/" className="bold">
-            Locations
-          </Link>
-          <Link to="/">Chandler</Link>
-          <Link to="/">Scottsdale</Link>
-          <Link to="/">West Valley</Link>
+    <StyledFooter>
+      <div className="links">
+        <div className="link-column">
+          <ul>
+            <li>
+              <Link to="/" className="bold">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/">About</Link>
+            </li>
+            <li>
+              <Link to="/">Reviews</Link>
+            </li>
+            <li>
+              <Link to="/">Leadership</Link>
+            </li>
+            <li></li>
+            <li>
+              <Link to="/" className="bold">
+                Locations
+              </Link>
+            </li>
+            <li>
+              <Link to="/">Chandler</Link>
+            </li>
+            <li>
+              <Link to="/">Scottsdale</Link>
+            </li>
+            <li>
+              <Link to="/">West Valley</Link>
+            </li>
+          </ul>
         </div>
-        <div className="footer-link-column">
-          <Link to="/" className="bold">
-            Learn More
-          </Link>
-          <Link to="/">Products</Link>
-          <Link to="/">Articles</Link>
-          <Link to="/">Community</Link>
-          <Link to="/">First-Time Buyers</Link>
-          <Link to="/">Reverse Mortgages</Link>
-          <span className="spacer"></span>
-          <Link to="/" className="bold">
-            Contact
-          </Link>
-          <Link to="/" className="bold">
-            Careers
-          </Link>
+        <div className="link-column">
+          <ul>
+            <li>
+              <Link to="/" className="bold">
+                Learn More
+              </Link>
+            </li>
+            <li>
+              <Link to="/">Products</Link>
+            </li>
+            <li>
+              <Link to="/">Articles</Link>
+            </li>
+            <li>
+              <Link to="/">Community</Link>
+            </li>
+            <li>
+              <Link to="/">First-Time Buyers</Link>
+            </li>
+            <li>
+              <Link to="/">Reverse Mortgages</Link>
+            </li>
+            <li></li>
+            <li>
+              <Link to="/" className="bold">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link to="/" className="bold">
+                Careers
+              </Link>
+            </li>
+          </ul>
         </div>
-        <div className="footer-link-column">
-          <Link to="/">Terms of Use</Link>
-          <Link to="/">Privacy Policy</Link>
-          <Link to="/">Legal Disclosures</Link>
-          <Link to="/">Licensing</Link>
-          <span className="spacer"></span>
-          <span className="spacer"></span>
-          <Link to="/" className="bold">
-            Complaints: 877-699-0353
-          </Link>
-          <Link to="/">customerservice@fairwaymc.com</Link>
-          <Link to="/">www.nmlsconsumeraccess.org</Link>
+        <div className="link-column">
+          <ul>
+            <li>
+              <Link to="/">Terms of Use</Link>
+            </li>
+            <li>
+              <Link to="/">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link to="/">Legal Disclosures</Link>
+            </li>
+            <li>
+              <Link to="/">Licensing</Link>
+            </li>
+            <li></li>
+            <li></li>
+            <li>
+              <Link to="/" className="bold">
+                Complaints: 877-699-0353
+              </Link>
+            </li>
+            <li>
+              <Link to="/">customerservice@fairwaymc.com</Link>
+            </li>
+            <li>
+              <Link to="/">www.nmlsconsumeraccess.org</Link>
+            </li>
+          </ul>
         </div>
-        <div className="footer-link-column">
-          <Link to="/" className="bold">
-            Fairway Phoenix
-          </Link>
-          <Link to="/">
-            9977 N. 90th Street #150
-            <br />
-            Scottsdale, AZ 85258
-          </Link>
-          <Link to="/" className="medium">
-            Additional Locations
-          </Link>
-          <span className="spacer"></span>
-          <Link to="/">Phone: 480-739-1600</Link>
-          <Link to="/">contact@fairwaymc.com</Link>
-          <Link to="/">Fairway Independent Mortgage</Link>
-          <Link to="/">Corp. (NMLS Entity ID #2289)</Link>
+        <div className="link-column">
+          <ul>
+            <li>
+              <Link to="/" className="bold">
+                Fairway Phoenix
+              </Link>
+            </li>
+            <li className="double">
+              <Link to="/">
+                9977 N. 90th Street #150
+                <br />
+                Scottsdale, AZ 85258
+              </Link>
+            </li>
+            <li>
+              <Link to="/" className="medium">
+                Additional Locations
+              </Link>
+            </li>
+            <li></li>
+            <li>
+              <Link to="/">Phone: 480-739-1600</Link>
+            </li>
+            <li>
+              <Link to="/">contact@fairwaymc.com</Link>
+            </li>
+            <li>
+              <Link to="/">Fairway Independent Mortgage</Link>
+            </li>
+            <li>
+              <Link to="/">Corp. (NMLS Entity ID #2289)</Link>
+            </li>
+          </ul>
         </div>
       </div>
-    </footer>
+      <div className="logos">
+        <Link to="/" className="fairway">
+          <img src={fairwayImage} width="100%" alt="" />
+        </Link>
+        <Link to="/" className="ehl">
+          <img src={ehlImage} width="100%" alt="" />
+        </Link>
+      </div>
+    </StyledFooter>
   )
 }
 
