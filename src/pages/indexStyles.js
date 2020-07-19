@@ -3,8 +3,7 @@ import styled from "styled-components"
 
 export const StyledIntroBlock = styled.div`
   background: ${vars.colorWhite};
-  padding-top: ${vars.spacer5XL};
-  padding-bottom: ${vars.spacer5XL};
+  padding: ${vars.spacer5XL} 0 85px;
   text-align: center;
   h2 {
     ${props => props.theme.headingSans2};
@@ -19,7 +18,7 @@ export const StyledLocationBlock = styled.div`
   background: ${vars.colorWhite};
   position: relative;
   .wrapper {
-    width: ${vars.wrapper};
+    width: 78vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -27,6 +26,7 @@ export const StyledLocationBlock = styled.div`
   &::before {
     content: "";
     background: ${vars.grayDarkOne};
+    background-image: ${props => `url(${props.bg})`};
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -34,8 +34,8 @@ export const StyledLocationBlock = styled.div`
   }
   .item {
     display: block;
-    width: 299px;
-    height: 368px;
+    width: 23vw;
+    height: 28vw;
     position: relative;
     p {
       position: absolute;
@@ -52,6 +52,22 @@ export const StyledLocationBlock = styled.div`
       font-weight: 500;
       letter-spacing: 2px;
     }
+    img {
+      position: relative;
+      z-index: 4000;
+    }
+    .overlay {
+      position: absolute;
+      z-index: 5000;
+      background: rgba(255, 255, 255, 0.2);
+      clip-path: polygon(100% 65%, 0% 90%, 100% 100%);
+      width: 100%;
+      height: 100%;
+    }
+    p {
+      position: absolute;
+      z-index: 6000;
+    }
   }
 `
 
@@ -60,7 +76,7 @@ export const StyledReviewBlock = styled.div`
   position: relative;
   overflow: hidden;
   .wrapper {
-    width: ${vars.wrapper};
+    width: 100%;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -71,13 +87,14 @@ export const StyledReviewBlock = styled.div`
     width: 960px;
     position: absolute;
     z-index: 4000;
-    left: -420px;
+    left: -220px;
     top: 20px;
   }
   .text-wrapper {
     position: relative;
     z-index: 5000;
     text-align: right;
+    right: 10vw;
     width: 800px;
     margin: 220px 0;
     .star-wrapper {
@@ -135,9 +152,11 @@ export const StyledNumbersBlock = styled.div`
     margin-bottom: ${vars.spacer2XL};
   }
   .item {
+    position: relative;
+    z-index: 7000;
     display: block;
     border: 1px solid #cbcbcb;
-    background: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     width: 900px;
     margin: 0 auto ${vars.spacerXL};
     height: 120px;

@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 import { ThemeProvider } from "styled-components"
 
@@ -23,6 +24,7 @@ import iconStar from "../images/icon/icon-star.svg"
 import iconStarPlain from "../images/icon/icon-star-plain.svg"
 import homeSmiling from "../images/home/home-smiling.jpg"
 import america from "../images/home/home-america.svg"
+import grainImage from "../images/shared/shared-noise.png"
 
 import _ from "underscore"
 import "../base.css"
@@ -45,6 +47,9 @@ const HomePage = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <Helmet>
+        <title>Fairway Phoenix – Financing the American Dream since 1996</title>
+      </Helmet>
       <Nav />
       <Hero img={homeHero}>
         <HeaderAngle text="Financing the American Dream." />
@@ -60,11 +65,12 @@ const HomePage = () => {
           </p>
         </div>
       </StyledIntroBlock>
-      <StyledLocationBlock>
+      <StyledLocationBlock bg={grainImage}>
         <div className="wrapper">
           {location_images.map((value, index) => {
             return (
               <Link className="item" to={value.url} key={index}>
+                <div className="overlay"></div>
                 <img src={value.src} width="100%" alt="" />
                 <p>{value.text}</p>
               </Link>
