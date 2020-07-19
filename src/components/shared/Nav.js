@@ -29,6 +29,10 @@ const StyledWrapper = styled.div`
       &:last-child {
         margin-right: 0;
       }
+      &:hover {
+        color: ${vars.grayDarkOne};
+        transition: all 0.2s;
+      }
     }
   }
 `

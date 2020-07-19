@@ -30,6 +30,9 @@ const StyledFooter = styled.footer`
     a {
       text-decoration: none;
       color: ${vars.colorBlack};
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .bold {
       font-weight: 700;

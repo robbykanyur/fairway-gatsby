@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 import { ThemeProvider } from "styled-components"
+import { Animated } from "react-animated-css"
 
 import Nav from "../components/shared/Nav"
 import Footer from "../components/shared/Footer"
@@ -24,10 +25,11 @@ import iconStar from "../images/icon/icon-star.svg"
 import iconStarPlain from "../images/icon/icon-star-plain.svg"
 import homeSmiling from "../images/home/home-smiling.jpg"
 import america from "../images/home/home-america.svg"
-import grainImage from "../images/shared/shared-noise.png"
+import cubes from "../images/shared/shared-cubes.png"
 
 import _ from "underscore"
 import "../base.css"
+import "../../node_modules/animate.css/animate.compat.css"
 import theme from "../theme"
 
 import {
@@ -52,7 +54,9 @@ const HomePage = () => {
       </Helmet>
       <Nav />
       <Hero img={homeHero}>
-        <HeaderAngle text="Financing the American Dream." />
+        <Animated animationIn="fadeInUp" animationInDelay="80">
+          <HeaderAngle text="Financing the American Dream." />
+        </Animated>
       </Hero>
       <StyledIntroBlock>
         <SectionIcon img={iconCactus} />
@@ -65,7 +69,7 @@ const HomePage = () => {
           </p>
         </div>
       </StyledIntroBlock>
-      <StyledLocationBlock bg={grainImage}>
+      <StyledLocationBlock bg={cubes}>
         <div className="wrapper">
           {location_images.map((value, index) => {
             return (
@@ -77,6 +81,7 @@ const HomePage = () => {
             )
           })}
         </div>
+        <div className="dark-section"></div>
       </StyledLocationBlock>
       <StyledReviewBlock>
         <div className="wrapper">

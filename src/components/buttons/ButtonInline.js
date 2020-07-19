@@ -12,9 +12,13 @@ const StyledWrapper = styled(Link)`
     text-transform: uppercase;
     padding: ${vars.spacer2XS} ${vars.spacerM};
     border-radius: 38px;
-    background: #f08a81;
+    background: ${vars.colorRed};
     font-size: 16px;
     color: ${vars.colorWhite}!important;
+    transition: all 0.2s;
+    &:hover {
+      background: ${vars.colorRedHover};
+    }
   }
 `
 

@@ -23,14 +23,29 @@ export const StyledLocationBlock = styled.div`
     display: flex;
     justify-content: space-between;
   }
-  &::before {
-    content: "";
+  .dark-section {
+    position: absolute;
+    z-index: 3000;
+    left: 0;
     background: ${vars.grayDarkOne};
-    background-image: ${props => `url(${props.bg})`};
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 70%;
+    overflow: hidden;
+    &::before {
+      content: "";
+      width: 120%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: ${props => `url(${props.bg})`};
+      opacity: 0.25;
+      z-index: 5000;
+      transform: rotate(-6deg);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
   }
   .item {
     display: block;

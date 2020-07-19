@@ -18,26 +18,57 @@ const StyledLink = styled(Link)`
   z-index: 5000;
   height: 73px;
   font-size: ${vars.typeS};
-  &::before {
-    content: "";
+  &:hover .hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .hover {
+    transition: clip-path 0.2s ease-in-out;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 104%;
+    height: 33px;
+    background: #000000;
+    color: #ffffff;
+    z-index: 7000;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    &::before {
+      content: '${props => props.text}';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 8000;
+      padding-left: 6px;
+      top: 8px;
+    }
+  }
+  .standard {
     position: absolute;
     top: 15px;
     right: 0;
     width: 104%;
     height: 33px;
     background: #cbfdff;
-    z-index: 6000;
-  }
-  &::after {
-    content: '${props => props.text}';
-    position: relative;
-    top: 3px;
-    z-index: 7000;
+    z-index: 5000;
+    &::before {
+      content: '${props => props.text}';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 6000;
+      padding-left: 6px;
+      top: 8px;
+    }
   }
 `
 
 const ButtonPrimary = props => {
-  return <StyledLink to={props.url} text={props.text}></StyledLink>
+  return (
+    <StyledLink to={props.url} text={props.text}>
+      <div class="hover"></div>
+      <div class="standard"></div>
+    </StyledLink>
+  )
 }
 
 export default ButtonPrimary
