@@ -52,6 +52,10 @@ export const StyledLocationBlock = styled.div`
     width: 23vw;
     height: 28vw;
     position: relative;
+    overflow: hidden;
+    &:hover img {
+      transform: scale(1.02);
+    }
     p {
       position: absolute;
       bottom: 0;
@@ -70,6 +74,7 @@ export const StyledLocationBlock = styled.div`
     img {
       position: relative;
       z-index: 4000;
+      transition: all 0.2s ease-in-out;
     }
     .overlay {
       position: absolute;

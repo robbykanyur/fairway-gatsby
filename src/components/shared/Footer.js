@@ -146,13 +146,9 @@ const Footer = () => {
             <li></li>
             <li></li>
             <li>
-              <Link to="/" className="bold">
-                Complaints: 877-699-0353
-              </Link>
+              <span className="bold">Complaints: 877-699-0353</span>
             </li>
-            <li>
-              <Link to="/">customerservice@fairwaymc.com</Link>
-            </li>
+            <li>customerservice@fairwaymc.com</li>
             <li>
               <Link to="/">www.nmlsconsumeraccess.org</Link>
             </li>
@@ -161,9 +157,7 @@ const Footer = () => {
         <div className="link-column">
           <ul>
             <li>
-              <Link to="/" className="bold">
-                Fairway Phoenix
-              </Link>
+              <span className="bold">Fairway Phoenix</span>
             </li>
             <li className="double">
               <Link to="/">
@@ -178,18 +172,10 @@ const Footer = () => {
               </Link>
             </li>
             <li></li>
-            <li>
-              <Link to="/">Phone: 480-739-1600</Link>
-            </li>
-            <li>
-              <Link to="/">contact@fairwaymc.com</Link>
-            </li>
-            <li>
-              <Link to="/">Fairway Independent Mortgage</Link>
-            </li>
-            <li>
-              <Link to="/">Corp. (NMLS Entity ID #2289)</Link>
-            </li>
+            <li>Phone: 480-739-1600</li>
+            <li>contact@fairwaymc.com</li>
+            <li>Fairway Independent Mortgage</li>
+            <li>Corp. (NMLS Entity ID #2289)</li>
           </ul>
         </div>
       </div>
