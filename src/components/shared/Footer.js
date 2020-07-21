@@ -173,7 +173,7 @@ const Footer = () => {
             </li>
             <li></li>
             <li>Phone: 480-739-1600</li>
-            <li>contact@fairwaymc.com</li>
+            <li>contact@fairwayphx.com</li>
             <li>Fairway Independent Mortgage</li>
             <li>Corp. (NMLS Entity ID #2289)</li>
           </ul>

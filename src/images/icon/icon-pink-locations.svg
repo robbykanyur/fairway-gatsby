@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-483.000000, -4919.000000)">
+            <g id="Group-14" transform="translate(449.000000, 4919.000000)">
+                <g id="Group" transform="translate(34.000000, 0.000000)">
+                    <polygon id="Path" points="0 0 100 0 100 100 0 100"></polygon>
+                    <line x1="12.5" y1="87.5" x2="87.5" y2="87.5" id="Path" stroke="#EE928B" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <path d="M12.5,29.1666667 L12.5,33.3333333 C12.5,40.2368927 18.0964406,45.8333333 25,45.8333333 C31.9035594,45.8333333 37.5,40.2368927 37.5,33.3333333 L37.5,29.1666667 M37.5,33.3333333 C37.5,40.2368927 43.0964406,45.8333333 50,45.8333333 C56.9035594,45.8333333 62.5,40.2368927 62.5,33.3333333 L62.5,29.1666667 M62.5,33.3333333 C62.5,40.2368927 68.0964406,45.8333333 75,45.8333333 C81.9035594,45.8333333 87.5,40.2368927 87.5,33.3333333 L87.5,29.1666667 L12.5,29.1666667 L20.8333333,12.5 L79.1666667,12.5 L87.5,29.1666667" id="Shape" stroke="#EE928B" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <line x1="20.8333333" y1="87.5" x2="20.8333333" y2="45.2083333" id="Path" stroke="#EE928B" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="79.1666667" y1="87.5" x2="79.1666667" y2="45.2083333" id="Path" stroke="#EE928B" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <path d="M37.5,87.5 L37.5,70.8333333 C37.5,66.2309604 41.2309604,62.5 45.8333333,62.5 L54.1666667,62.5 C58.7690396,62.5 62.5,66.2309604 62.5,70.8333333 L62.5,87.5" id="Path" stroke="#EE928B" stroke-width="6.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

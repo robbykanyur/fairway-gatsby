@@ -11,6 +11,7 @@ import Hero from "../components/shared/Hero"
 
 import ButtonAlternate from "../components/buttons/ButtonAlternate"
 import ButtonPrimary from "../components/buttons/ButtonPrimary"
+import ButtonInline from "../components/buttons/ButtonInline"
 
 import HeaderAngle from "../components/elements/HeaderAngle"
 import SectionIcon from "../components/elements/SectionIcon"
@@ -26,6 +27,10 @@ import iconStarPlain from "../images/icon/icon-star-plain.svg"
 import homeSmiling from "../images/home/home-smiling.jpg"
 import america from "../images/home/home-america.svg"
 import cubes from "../images/shared/shared-cubes.png"
+import iconPinkAbout from "../images/icon/icon-pink-about.svg"
+import iconPinkLocations from "../images/icon/icon-pink-locations.svg"
+import iconPinkReviews from "../images/icon/icon-pink-reviews.svg"
+import iconPinkLearnMore from "../images/icon/icon-pink-learn-more.svg"
 
 import _ from "underscore"
 import "../base.css"
@@ -38,6 +43,7 @@ import {
   StyledReviewBlock,
   StyledStrengthBlock,
   StyledNumbersBlock,
+  StyledActionBlock,
 } from "./indexStyles"
 
 const HomePage = () => {
@@ -45,6 +51,13 @@ const HomePage = () => {
     { src: homeChandler, text: "Chandler", url: "/" },
     { src: homeScottsdale, text: "Scottsdale", url: "/" },
     { src: homeWestValley, text: "West Valley", url: "/" },
+  ]
+
+  const action_items = [
+    { img: iconPinkAbout, text: "About" },
+    { img: iconPinkLocations, text: "Locations" },
+    { img: iconPinkReviews, text: "Reviews" },
+    { img: iconPinkLearnMore, text: "Learn More" },
   ]
 
   return (
@@ -158,6 +171,16 @@ const HomePage = () => {
           <ButtonAlternate url="/" text="Get Your Decision" />
         </span>
       </CTA>
+      <StyledActionBlock>
+        {action_items.map((value, index) => {
+          return (
+            <div className="item" key={index}>
+              <img src={value.img} width="100%" alt="" />
+              <ButtonInline url="/" text={value.text} />
+            </div>
+          )
+        })}
+      </StyledActionBlock>
       <Footer />
     </ThemeProvider>
   )

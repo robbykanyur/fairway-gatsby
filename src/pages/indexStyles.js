@@ -170,6 +170,8 @@ export const StyledNumbersBlock = styled.div`
     color: ${vars.colorRed};
     font-size: ${vars.type5XL};
     margin-bottom: ${vars.spacer2XL};
+    position: relative;
+    z-index: 7000;
   }
   .item {
     position: relative;
@@ -202,4 +204,10 @@ export const StyledNumbersBlock = styled.div`
       font-weight: 700;
     }
   }
+`
+
+export const StyledActionBlock = styled.div`
+  display: flex;
+  width: 100%;
+  background: #000;
 `

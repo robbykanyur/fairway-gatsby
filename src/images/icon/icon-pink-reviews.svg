@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-823.000000, -4905.000000)">
+            <g id="Group-15" transform="translate(804.000000, 4905.000000)">
+                <g id="Group" transform="translate(19.000000, 0.000000)">
+                    <polygon id="Path" points="0 0 130 0 130 130 0 130"></polygon>
+                    <path d="M81.25,113.75 L32.5,113.75 C23.5253728,113.75 16.25,106.474627 16.25,97.5 L16.25,92.0833333 L70.4166667,92.0833333 L70.4166667,102.916667 C70.4166667,108.899751 75.2669152,113.75 81.25,113.75 C87.2330848,113.75 92.0833333,108.899751 92.0833333,102.916667 L92.0833333,27.0833333 C92.0833333,21.1002485 96.9335819,16.25 102.916667,16.25 C108.899751,16.25 113.75,21.1002485 113.75,27.0833333 C113.75,33.0664181 108.899751,37.9166667 102.916667,37.9166667 L92.0833333,37.9166667 M102.916667,16.25 L43.3333333,16.25 C34.3587061,16.25 27.0833333,23.5253728 27.0833333,32.5 L27.0833333,92.0833333" id="Shape" stroke="#EE928B" stroke-width="8.125" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <line x1="48.75" y1="37.9166667" x2="70.4166667" y2="37.9166667" id="Path" stroke="#EE928B" stroke-width="8.125" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <line x1="48.75" y1="59.5833333" x2="70.4166667" y2="59.5833333" id="Path" stroke="#EE928B" stroke-width="8.125" stroke-linecap="round" stroke-linejoin="round"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

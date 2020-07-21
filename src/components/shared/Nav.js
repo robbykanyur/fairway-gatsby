@@ -49,11 +49,13 @@ const Nav = () => {
     <StyledWrapper>
       <nav>
         <div className="icon">
-          <img
-            src={iconFairway}
-            width="100%"
-            alt="Fairway Independent Mortgage Logo"
-          />
+          <Link to="/">
+            <img
+              src={iconFairway}
+              width="100%"
+              alt="Fairway Independent Mortgage Logo"
+            />
+          </Link>
         </div>
         <div>
           {links.map((value, index) => {

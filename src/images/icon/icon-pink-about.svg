@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="106px" viewBox="0 0 106 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-124.000000, -4916.000000)">
+            <g id="Group-13" transform="translate(93.000000, 4904.000000)">
+                <g id="Group" transform="translate(19.000000, 0.000000)">
+                    <polygon id="Path" points="0 0 130 0 130 130 0 130"></polygon>
+                    <path d="M16.25,65 L21.6666667,65 M65,16.25 L65,21.6666667 M108.333333,65 L113.75,65 M30.3333333,30.3333333 L34.125,34.125 M99.6666667,30.3333333 L95.875,34.125" id="Shape" stroke="#EE928B" stroke-width="8.125" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M48.75,86.6666667 C39.4240078,79.6721725 35.6200719,67.4947643 39.306494,56.435498 C42.9929161,45.3762317 53.3425098,37.9166667 65,37.9166667 C76.6574902,37.9166667 87.0070839,45.3762317 90.693506,56.435498 C94.3799281,67.4947643 90.5759922,79.6721725 81.25,86.6666667 C76.9608797,90.912406 74.9494807,96.946603 75.8333333,102.916667 C75.8333333,108.899751 70.9830848,113.75 65,113.75 C59.0169152,113.75 54.1666667,108.899751 54.1666667,102.916667 C55.0505193,96.946603 53.0391203,90.912406 48.75,86.6666667" id="Path" stroke="#EE928B" stroke-width="8.125" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <line x1="52.5416667" y1="92.0833333" x2="77.4583333" y2="92.0833333" id="Path" stroke="#EE928B" stroke-width="8.125" stroke-linecap="round" stroke-linejoin="round"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
