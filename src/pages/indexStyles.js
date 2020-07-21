@@ -209,5 +209,15 @@ export const StyledNumbersBlock = styled.div`
 export const StyledActionBlock = styled.div`
   display: flex;
   width: 100%;
-  background: #000;
+  background: ${vars.offWhiteTwo};
+  position: relative;
+  .item {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:nth-child(even) {
+      background: ${vars.offWhiteThree};
+    }
+  }
 `
