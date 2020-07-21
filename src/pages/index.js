@@ -54,10 +54,10 @@ const HomePage = () => {
   ]
 
   const action_items = [
-    { img: iconPinkAbout, text: "About" },
-    { img: iconPinkLocations, text: "Locations" },
-    { img: iconPinkReviews, text: "Reviews" },
-    { img: iconPinkLearnMore, text: "Learn More" },
+    { img: iconPinkAbout, text: "About", url: "/" },
+    { img: iconPinkLocations, text: "Locations", url: "/" },
+    { img: iconPinkReviews, text: "Reviews", url: "/" },
+    { img: iconPinkLearnMore, text: "Learn More", url: "/" },
   ]
 
   return (
@@ -174,10 +174,10 @@ const HomePage = () => {
       <StyledActionBlock>
         {action_items.map((value, index) => {
           return (
-            <div className="item" key={index}>
+            <Link className="item" to={value.url} key={index}>
               <img src={value.img} width="100%" alt="" />
-              <ButtonInline url="/" text={value.text} />
-            </div>
+              <ButtonInline text={value.text} />
+            </Link>
           )
         })}
       </StyledActionBlock>

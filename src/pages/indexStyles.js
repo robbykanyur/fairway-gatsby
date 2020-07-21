@@ -211,13 +211,41 @@ export const StyledActionBlock = styled.div`
   width: 100%;
   background: ${vars.offWhiteTwo};
   position: relative;
-  .item {
-    width: 25%;
+  a.item {
+    display: block;
+    width: 25vw;
+    height: 25vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    &:hover a {
+      background: ${vars.colorRedHover};
+      border-radius: 38px;
+    }
+    a {
+      width: 180px;
+      text-align: center;
+    }
+    img {
+      margin-bottom: ${vars.spacerXS};
+      height: 120px;
+    }
     &:nth-child(even) {
       background: ${vars.offWhiteThree};
+    }
+    &:nth-child(2) img {
+      margin-top: 15px;
+      height: 105px;
+    }
+    &:nth-child(3) img {
+      height: 105px;
+      margin-top: 15px;
+    }
+    &:nth-child(4) img {
+      height: 95px;
+      margin-top: 22px;
+      margin-bottom: ${vars.spacerS};
     }
   }
 `
