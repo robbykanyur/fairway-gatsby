@@ -1,8 +1,8 @@
 let vars = {
   colorWhite: "#FFFFFF",
   colorOffWhite: "#FAFAFA",
-  offWhiteTwo: "#F5F5F5",
-  offWhiteThree: "#EDEDED",
+  offWhiteTwo: "#F4F4F4",
+  offWhiteThree: "#F9F9F9",
   colorBlack: "#000000",
   colorRed: "#F08A81",
   colorRedHover: "#FFA49B",

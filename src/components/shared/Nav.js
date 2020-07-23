@@ -42,7 +42,8 @@ const Nav = () => {
     { text: "About", url: "/about" },
     { text: "Locations", url: "/locations" },
     { text: "Reviews", url: "/reviews" },
-    { text: "Learn More", url: "learn-more" },
+    { text: "Learn More", url: "/learn-more" },
+    { text: "Credit Help", url: "/credit" },
   ]
 
   return (
