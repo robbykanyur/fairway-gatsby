@@ -14,6 +14,7 @@ const StyledH1 = styled.h1`
   clip-path: polygon(7% 0%, 100% 0%, 93% 100%, 0% 100%);
   opacity: 0.9;
   padding: ${vars.spacerXL} ${vars.spacer5XL};
+  max-width: 100%;
 `
 
 const HeaderAngle = props => {

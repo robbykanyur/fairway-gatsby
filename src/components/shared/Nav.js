@@ -35,6 +35,9 @@ const StyledWrapper = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 320px) {
+    width: ${vars.px320wrapper};
+  }
 `
 
 const Nav = () => {

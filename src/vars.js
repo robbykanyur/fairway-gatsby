@@ -59,6 +59,8 @@ let vars = {
   serif: "Reckless Trial",
 
   wrapper: "992px",
+
+  px320wrapper: "90%",
 }
 
 export default vars

@@ -10,6 +10,7 @@ export const StyledIntroBlock = styled.div`
   }
   p {
     width: 700px;
+    max-width: 100%;
     margin: 0 auto;
   }
 `
@@ -105,6 +106,7 @@ export const StyledReviewBlock = styled.div`
   }
   .photo {
     width: 960px;
+    max-width: 100%;
     position: absolute;
     z-index: 4000;
     left: -220px;
@@ -116,6 +118,7 @@ export const StyledReviewBlock = styled.div`
     text-align: right;
     right: 10vw;
     width: 800px;
+    max-width: 100%;
     margin: 220px 0;
     .star-wrapper {
       margin-bottom: ${vars.spacer2XS};
@@ -148,6 +151,7 @@ export const StyledStrengthBlock = styled.div`
   }
   p {
     width: 750px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     font-size: ${vars.typeL};
@@ -180,6 +184,7 @@ export const StyledNumbersBlock = styled.div`
     border: 1px solid #cbcbcb;
     background-color: rgba(255, 255, 255, 0.75);
     width: 900px;
+    max-width: 100%;
     margin: 0 auto ${vars.spacerXL};
     height: 120px;
     display: flex;
@@ -225,6 +230,7 @@ export const StyledActionBlock = styled.div`
     }
     a {
       width: 180px;
+      max-width: 100%;
       text-align: center;
     }
     img {

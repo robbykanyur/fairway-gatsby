@@ -11,6 +11,7 @@ const StyledFooter = styled.footer`
   background: ${vars.colorWhite};
   .links {
     width: ${vars.wrapper};
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;

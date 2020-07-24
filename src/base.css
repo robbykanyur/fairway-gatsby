@@ -9,6 +9,12 @@
 }
 
 html,
+body {
+  position: relative;
+  width: 100%;
+}
+
+html,
 body,
 div,
 span,

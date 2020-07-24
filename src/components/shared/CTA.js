@@ -16,6 +16,7 @@ const StyledCTA = styled.div`
   p {
     color: ${vars.colorWhite};
     width: 700px;
+    max-width: 100%;
     margin: 0 auto ${vars.spacer2XL};
     text-align: center;
   }
