@@ -25,7 +25,9 @@ const StyledWrapper = styled(Link)`
 const ButtonInline = ({ url, text }) => {
   return (
     <StyledWrapper>
-      <Link to={url}>{text}</Link>
+      <Link to={url} className="button-inline">
+        {text}
+      </Link>
     </StyledWrapper>
   )
 }

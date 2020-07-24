@@ -60,7 +60,7 @@ let vars = {
 
   wrapper: "992px",
 
-  px320wrapper: "90%",
+  px320wrapper: "85%",
 }
 
 export default vars

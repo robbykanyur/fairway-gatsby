@@ -5,9 +5,12 @@ import vars from "../../vars"
 
 import ButtonInline from "../buttons/ButtonInline"
 import iconFairway from "../../images/shared/shared-icon.svg"
+import iconClose from "../../images/shared/shared-nav-close.svg"
+import iconMenu from "../../images/shared/shared-nav-menu.svg"
 
 const StyledWrapper = styled.div`
   width: ${vars.wrapper};
+  max-width: 100%;
   margin: 0 auto;
   nav {
     background: #fff;
@@ -34,9 +37,64 @@ const StyledWrapper = styled.div`
         transition: all 0.2s;
       }
     }
+    .close {
+      display: none;
+    }
+    .menu {
+      display: none;
+    }
   }
   @media only screen and (max-width: 320px) {
     width: ${vars.px320wrapper};
+    nav {
+      .icon {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .menu {
+        display: block;
+        position: absolute;
+        top: 29px;
+        right: 14px;
+        width: 32px;
+      }
+      .links {
+        transition: top 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        top: -100%;
+        left: 0;
+        height: 100vh;
+        z-index: 9000;
+        background: ${vars.colorRed};
+        a {
+          color: ${vars.colorWhite};
+          text-align: center;
+          margin-right: 0;
+          margin-bottom: ${vars.spacerL};
+          font-size: ${vars.typeM};
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .button-inline {
+            background: ${vars.colorWhite}!important;
+            color: ${vars.colorRed}!important;
+          }
+        }
+        .close {
+          display: block;
+          position: absolute;
+          top: ${vars.spacerS};
+          right: ${vars.spacerS};
+          z-index: 9200;
+          width: 48px;
+        }
+      }
+    }
   }
 `
 
@@ -61,7 +119,17 @@ const Nav = () => {
             />
           </Link>
         </div>
-        <div>
+        <div className="menu">
+          <Link to="/">
+            <img src={iconMenu} width="100%" alt="" />
+          </Link>
+        </div>
+        <div className="links">
+          <div className="close">
+            <Link to="/">
+              <img src={iconClose} width="100%" alt="" />
+            </Link>
+          </div>
           {links.map((value, index) => {
             return (
               <Link key={index} to={value.url}>
