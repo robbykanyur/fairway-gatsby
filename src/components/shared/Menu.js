@@ -1,47 +1,42 @@
-import React, { Component } from "react"
+import React from "react"
 import { Link } from "gatsby"
+import { connect } from "react-redux"
 import styled from "styled-components"
 import vars from "../../vars"
+
+import { isMenuVisible } from "../../state/app"
 
 import ButtonInline from "../../components/buttons/ButtonInline"
 
 import iconClose from "../../images/shared/shared-nav-close.svg"
 
-class Menu extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isMenuVisible: false,
-    }
-  }
+const links = [
+  { text: "About", url: "/about" },
+  { text: "Locations", url: "/locations" },
+  { text: "Reviews", url: "/reviews" },
+  { text: "Learn More", url: "/learn-more" },
+  { text: "Credit Help", url: "/credit" },
+]
 
-  render() {
-    const links = [
-      { text: "About", url: "/about" },
-      { text: "Locations", url: "/locations" },
-      { text: "Reviews", url: "/reviews" },
-      { text: "Learn More", url: "/learn-more" },
-      { text: "Credit Help", url: "/credit" },
-    ]
-
-    return (
-      <div className={this.props.className}>
-        <div className="close">
-          <button>
-            <img src={iconClose} width="100%" alt="" />
-          </button>
-        </div>
-        {links.map((value, index) => {
-          return (
-            <Link key={index} to={value.url}>
-              {value.text}
-            </Link>
-          )
-        })}
-        <ButtonInline url="/" text="Get Approved" />
+const Menu = ({ toggleMenu, dispatch, ...props }) => {
+  console.log(props)
+  return (
+    <div className={props.className}>
+      <div className="close">
+        <button>
+          <img src={iconClose} width="100%" alt="" />
+        </button>
       </div>
-    )
-  }
+      {links.map((value, index) => {
+        return (
+          <Link key={index} to={value.url}>
+            {value.text}
+          </Link>
+        )
+      })}
+      <ButtonInline url="/" text="Get Approved" />
+    </div>
+  )
 }
 
 const StyledMenu = styled(Menu)`
@@ -109,4 +104,9 @@ const StyledMenu = styled(Menu)`
   }
 `
 
-export default StyledMenu
+export default connect(
+  state => ({
+    isMenuVisible: state.app.isMenuVisible,
+  }),
+  null
+)(StyledMenu)
