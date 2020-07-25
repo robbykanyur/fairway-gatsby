@@ -21,7 +21,7 @@ const links = [
 const Menu = ({ toggleMenu, dispatch, ...props }) => {
   console.log(props)
   return (
-    <div className={props.className}>
+    <div className={`${props.className} ${isMenuVisible ? "isVisible" : null}}`>
       <div className="close">
         <button>
           <img src={iconClose} width="100%" alt="" />
