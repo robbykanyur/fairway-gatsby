@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 import { connect } from "react-redux"
 import styled from "styled-components"
 import vars from "../../vars"
-
-import { isMenuVisible } from "../../state/app"
+import PropTypes from 'prop-types'
 
 import ButtonInline from "../../components/buttons/ButtonInline"
 
@@ -18,10 +17,8 @@ const links = [
   { text: "Credit Help", url: "/credit" },
 ]
 
-const Menu = ({ toggleMenu, dispatch, ...props }) => {
-  console.log(props)
-  return (
-    <div className={`${props.className} ${isMenuVisible ? "isVisible" : null}}`>
+const Wrapper = ({ isMenuVisible }) => (
+  <div className={`${isMenuVisible ? "isVisible" : null}`}>
       <div className="close">
         <button>
           <img src={iconClose} width="100%" alt="" />
@@ -36,7 +33,29 @@ const Menu = ({ toggleMenu, dispatch, ...props }) => {
       })}
       <ButtonInline url="/" text="Get Approved" />
     </div>
-  )
+)
+
+Wrapper.propTypes = {
+  isMenuVisible: PropTypes.bool.isRequired
+}
+
+const mapStateToProps = ({ isMenuVisible }) => {
+  return { isMenuVisible }
+}
+
+const mapDispatchToProps = dispatch => {
+  return { toggleMenu: () => dispatch({ type: 'TOGGLE_MENU' })}
+}
+
+const ConnectedWrapper = connect(mapStateToProps, mapDispatchToProps)(Wrapper)
+
+
+class Menu extends React.Component {
+  render() {
+    return (
+    <ConnectedWrapper />
+    )
+  }
 }
 
 const StyledMenu = styled(Menu)`
@@ -104,9 +123,4 @@ const StyledMenu = styled(Menu)`
   }
 `
 
-export default connect(
-  state => ({
-    isMenuVisible: state.app.isMenuVisible,
-  }),
-  null
-)(StyledMenu)
+export default StyledMenu
