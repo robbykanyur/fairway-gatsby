@@ -9,6 +9,9 @@ const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 320px) {
+    height: 75vh;
+  }
 `
 
 const Hero = props => {

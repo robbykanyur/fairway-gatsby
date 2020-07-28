@@ -15,6 +15,13 @@ const StyledH1 = styled.h1`
   opacity: 0.9;
   padding: ${vars.spacerXL} ${vars.spacer5XL};
   max-width: 100%;
+  @media only screen and (max-width: 320px) {
+    clip-path: none;
+    width: 100%;
+    font-size: ${vars.typeXL};
+    padding-left: ${vars.spacerXS};
+    padding-right: ${vars.spacerXS};
+  }
 `
 
 const HeaderAngle = props => {
