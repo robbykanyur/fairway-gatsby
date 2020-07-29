@@ -13,6 +13,15 @@ export const StyledIntroBlock = styled.div`
     max-width: 100%;
     margin: 0 auto;
   }
+  @media only screen and (max-width: 320px) {
+    h2 {
+      font-size: ${vars.typeL};
+      width: 90%;
+    }
+    p {
+      width: 90%;
+    }
+  }
 `
 
 export const StyledLocationBlock = styled.div`

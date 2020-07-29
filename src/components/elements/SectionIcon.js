@@ -5,6 +5,10 @@ import vars from "../../vars"
 const StyledIconWrapper = styled.div`
   width: 150px;
   margin: 0 auto ${vars.spacerS};
+  @media only screen and (max-width: 320px) {
+    width: 100px;
+    margin-bottom: 0;
+  }
 `
 
 const SectionIcon = props => {
