@@ -220,6 +220,17 @@ export const StyledStrengthBlock = styled.div`
     margin-right: auto;
     font-size: ${vars.typeL};
   }
+  @media only screen and (max-width: 320px) {
+    h2 {
+      font-size: ${vars.typeL};
+      width: 90%;
+    }
+    p {
+      width: 90%;
+      font-size: ${vars.typeS};
+      text-align: center;
+    }
+  }
 `
 
 export const StyledNumbersBlock = styled.div`
