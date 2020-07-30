@@ -99,6 +99,26 @@ export const StyledLocationBlock = styled.div`
       z-index: 6000;
     }
   }
+  @media only screen and (max-width: 320px) {
+    .wrapper {
+      padding: ${vars.spacer2XL} 0;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      .item {
+        width: 80vw;
+        height: 96.8vw;
+        margin-bottom: ${vars.spacerXL};
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .dark-section {
+      height: 100%;
+    }
+  }
 `
 
 export const StyledReviewBlock = styled.div`
