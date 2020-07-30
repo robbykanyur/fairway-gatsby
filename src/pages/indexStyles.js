@@ -168,6 +168,41 @@ export const StyledReviewBlock = styled.div`
       margin-bottom: ${vars.spacerXS};
     }
   }
+  @media only screen and (max-width: 320px) {
+    .photo {
+      position: absolute;
+      top: 127vw;
+      left: 7%;
+    }
+    .text-wrapper {
+      width: 90%;
+      margin: ${vars.spacer3XL} 0;
+      right: 0;
+      padding-bottom: 70vw;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      h2 {
+        font-size: ${vars.typeXL};
+        margin-left: auto;
+        margin-right: auto;
+      }
+      p {
+        margin-bottom: ${vars.spacerL};
+      }
+    }
+    .star-wrapper {
+      margin-left: auto;
+      margin-right: auto;
+      .star {
+        width: 20px;
+        margin-right: ${vars.spacer2XS};
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 `
 
 export const StyledStrengthBlock = styled.div`

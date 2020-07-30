@@ -60,6 +60,9 @@ const StyledLink = styled(Link)`
       top: 8px;
     }
   }
+  @media only screen and (max-width: 320px) {
+    max-width: 90%;
+  }
 `
 
 const ButtonPrimary = props => {
